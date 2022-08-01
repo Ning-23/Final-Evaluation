@@ -54,10 +54,10 @@ const renderTasks = (tasks, element) => {
 // Template
 const generateTaskPageTmp = ({searchBarClass, containerClass, tasksClass, searchInputClass, searchSubmitClass}) => {
     return `<section class= "${containerClass}">
-                <div class="${searchBarClass}">
+                <form class="${searchBarClass}">
                     <input class="${searchInputClass}" type="text">
                     <button class="${searchSubmitClass}">Submit</button>
-                </div>
+                </form>
                 <div class="${tasksClass}"></div>
             </section>`;
 };

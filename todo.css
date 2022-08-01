@@ -23,8 +23,36 @@ html {
 	max-width: 1280px;
 	margin: auto;
 	padding: 1rem 0.5rem;
+    
+}
+/* search bar */
+.searchBar{
+    display: flex;
+    flex-direction:row;
+}
+.searchBar__input{
+    display:block;
+    height:3em;
+    width:50%;
+    margin-left:15%;
+    border: 0.2em solid #e6e2d3;
+    border-radius: 0.3em;
+    
 }
 
+
+.searchBar__submit{
+    display:block;
+    margin-left:7%;
+    height:3em;
+    width:8%;
+    border: 0.1em solid #008cba;
+    border-radius: 0.3em;
+    background-color: var(--color-Blue);
+}
+
+
+/* tasks */
 .tasks{
     display: flex;
     flex-direction:column;
