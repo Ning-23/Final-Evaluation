@@ -34,7 +34,7 @@ html {
     height:3em;
     width:50%;
     margin-left:15%;
-    border: 0.2em solid #e6e2d3;
+    border: 0.2em solid var(--color-Tan);
     border-radius: 0.3em;
 }
 
@@ -44,7 +44,7 @@ html {
     margin-left:7%;
     height:3em;
     width:8%;
-    border: 0.1em solid #008cba;
+    border: 0.1em solid var(--color-Blue);
     border-radius: 0.3em;
     background-color: var(--color-Blue);
 }
@@ -54,11 +54,11 @@ html {
 .tasks{
     display: flex;
     margin-left: 6vw;
-    height:80vh;
+    min-height:50vh;
     width: 50vw;
     flex-direction:column;
     margin-top: 5em;
-    border: 0.3em solid #e6e2d3;
+    border: 0.3em solid var(--color-Traffic-white);
     border-radius: 0.3em;
     background-color: var(--color-Traffic-white);
 }
@@ -66,14 +66,36 @@ html {
 .task{
     display: flex;
     flex-direction:row;
+    height:3em;
+    border: 0.1em solid var(--color-Tan);
+    border-radius: 0.3em;
+    background-color: var(--color-Tan);
+    margin-top: 1em;
+    width:90%;
+    margin-left:5%;
+}
+.task__body{
+    flex:8;
+}
+
+.task__body-text{
+    height:100%;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 2;
+}
+svg{
+    
 }
 
 .task__edit-btn{
     width:2em;
     height:2em;
+    background-color: var(--color-Blue);
 }
 
 .task__del-btn{
     width:2em;
     height:2em;
+    background-color: var(--color-Vermillion-red);
 }
