@@ -68,7 +68,7 @@ const  generateTaskTmp = (task,
     return `
     <section class= "${containerClass}">
         <div class="${body}">
-            <p class="${bodyText}">${task.body}</p>
+            <p class="${bodyText}">${task.title}</p>
         </div>
         <div class="${editBtn}">
             <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" 
