@@ -1,0 +1,46 @@
+:root{
+    --color-Tan:#e6e2d3;
+    --color-Traffic-white: #f0f0f0;
+    --color-Yellow-green: #4caf50;
+    --color-Vermillion-red: #c94c4c;
+    --color-Blue: #008cba;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* container */
+.container {
+	max-width: 1280px;
+	margin: auto;
+	padding: 1rem 0.5rem;
+}
+
+.tasks{
+    display: flex;
+    flex-direction:column;
+}
+
+.task{
+    display: flex;
+    flex-direction:row;
+}
+
+.task__edit-btn{
+    width:2em;
+    height:2em;
+}
+
+.task__del-btn{
+    width:2em;
+    height:2em;
+}
