@@ -70,7 +70,7 @@ const  generateTaskTmp = (task,
         <div class="${body}">
             <p class="${bodyText}">${task.title}</p>
         </div>
-        <div class="${editBtn}">
+        <div class="${editBtn}" >
             <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" 
             data-testid="EditIcon" aria-label="fontSize small">
                 <path fill="#ffffff" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 
@@ -78,7 +78,7 @@ const  generateTaskTmp = (task,
                 </path>
             </svg>
         </div>
-        <div class="${delBtn}">
+        <div class="${delBtn}" name="btn-delete-${task.id}">
             <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DeleteIcon" aria-label="fontSize small">
                 <path fill="#ffffff" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z">
                 </path>
@@ -88,6 +88,22 @@ const  generateTaskTmp = (task,
     ` ;
 };
 
+const setUpTasksEvent = () => {
+    const tasks = document.querySelector(
+        `.${DomSelectors.taskPage.tasksClass}`
+    );
+    tasks.addEventListener('click', (event) => {
+        let svg = event.target.closest('svg');
+        if (!svg) return;
+        let div = event.target.closest('div');
+        console.log(event.target);
+        console.log(div);
+        if(div?.name?.startsWith("btn-delete")){
+            console.log(event.target, 'yeseeee');
+        }
+    });
+};
+
 // INIT
 const init = () => {
     // render the tasks page
@@ -95,7 +111,7 @@ const init = () => {
     const tasksElement = document.querySelector(
         `.${DomSelectors.taskPage.tasksClass}`
     );
-
+    setUpTasksEvent(tasksElement);
     getTasks().then( (data) => {
         renderTasks(data, tasksElement)
     });
